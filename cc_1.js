@@ -14,4 +14,12 @@ function calcTip(bill) {
  // Test the function with a bill value of $100
  const testbill = 100;
  console.log(`The tip for a bill of $${testbill} is $${calcTip(testbill)}.`);
- 
+
+ // Task 4: Utilize Arrays
+ const bills = [275, 40, 430, 125, 555, 44];
+ const tips = bills.map(bill => calcTip(bill));
+ const totals = bills.map((bill, index) => bill + tips[index]);
+
+ console.log("Bills: ", bills);
+ console.log("Tips: ", tips);
+ console.log("Totals: ", totals);
